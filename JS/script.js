@@ -1,25 +1,27 @@
 addToHistory();
 
 const donateBtn = document.getElementById('donate-btn');
+const historyBtn = document.getElementById('history-btn');
+const historyMein = document.getElementById('history-main');
+const donateMain = document.getElementById('donation-main');
 
 donateBtn.addEventListener('click', () => {
-    donateBtn.classList.add('border-lightGreen', 'bg-lightGreen');
-    donateBtn.classList.remove('border-slate-300', 'bg-transparent');
-    historyBtn.classList.remove('border-lightGreen', 'bg-lightGreen');
-    historyBtn.classList.add('border-slate-300', 'bg-transparent');
+    donateBtn.classList.add('bg-lightGreen', 'hover:bg-lightGreen');
+    historyBtn.classList.remove('bg-lightGreen', 'hover:bg-lightGreen');
 
     document.getElementById('donation-main').classList.remove('hidden');
-    document.getElementById('history-main').classList.add('hidden');
+    historyMein.classList.add('hidden');
 })
 
-
-const historyBtn = document.getElementById('history-btn');
 historyBtn.addEventListener('click', () => {
-    historyBtn.classList.add('border-lightGreen', 'bg-lightGreen');
-    historyBtn.classList.remove('border-slate-300', 'bg-transparent');
-    donateBtn.classList.remove('border-lightGreen', 'bg-lightGreen');
-    donateBtn.classList.add('border-slate-300', 'bg-transparent');
+    historyBtn.classList.add('bg-lightGreen', 'hover:bg-lightGreen');
+    donateBtn.classList.remove('bg-lightGreen', 'hover:bg-lightGreen');
 
-    document.getElementById('history-main').classList.remove('hidden');
-    document.getElementById('donation-main').classList.add('hidden');
+    historyMein.classList.remove('hidden');
+    donateMain.classList.add('hidden');
 })
+
+// Donate -
+donate('donate-btn-1', 'donate-input-1', 'total-donate-1', 'hading-1');
+donate('donate-btn-2', 'donate-input-2', 'total-donate-2', 'hading-2');
+donate('donate-btn-3', 'donate-input-3', 'total-donate-3', 'hading-3');
