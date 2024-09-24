@@ -32,11 +32,11 @@ function donate(btn, input, total, hading) {
             totalDonation.innerHTML = newTotalDonation;
 
             addToHistory(donateAmount, heading)
+            my_modal_1.showModal();
         } else {
-            alert("Enter Valid Amount")
+            alert("Enter Valid Amount");
         }
 
         donateValue.value = '';
     })
 }
-

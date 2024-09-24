@@ -33,7 +33,7 @@
 
 <body class="font-lexend">
   <!-- Navbar Section Start -->
-  <section class="bg-slate-100 pb-8 pt-2">
+  <section class="bg-slate-100 pb-8 pt-2 sticky top-0 z-10">
     <div class="navbar bg-transparent container mx-auto">
       <div class="navbar-start">
         <a id="blog-btn" class="btn bg-lightGreen text-xl" href="./blog.html">Blog</a>
@@ -142,28 +142,38 @@
           </div>
         </div>
       </div>
+
+      <!-- Open the modal using ID.showModal() method -->
+      <dialog id="my_modal_1" class="modal">
+        <div class="modal-box text-center">
+          <h3 class="text-4xl font-bold mb-6">Congrates !</h3>
+          <img class="mx-auto w-10" src="../assets/coin.png" alt="">
+          <p class="mb-3 mt-6">You Have Donated for Humankind</p>
+          <h3 class="text-xl font-bold mb-5">Successfully</h3>
+          <div class="">
+            <form method="dialog">
+              <button class="btn">Close Confirmation</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <!-- Modal Section End -->
+
     </main>
     <!-- Main Donation Section End-->
 
     <!-- History Section Start -->
     <main id="history-main" class="mx-auto space-y-6 hidden">
       <div id="history-div">
-        <!-- Demo History -->
-        <!-- <div class="border-4 rounded-lg p-4 mb-5">
-          <h1 class="text-xl mb-2">100 Taka is Donated for Donate for Flood at Noakhali , Bangladesh</h1>
-          <p class="bg-slate-100 p-2 font-semibold rounded-lg">
-            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
-          </p>
-        </div> -->
+        <!-- History Added Here -->
       </div>
     </main>
     <!-- History Section End -->
-
   </section>
   <!-- Main Section End -->
 
   <!-- Page End -->
-  <div class="bg-slate-100 py-14 mt-24"></div>
+  <div id="endPage" class="bg-slate-100 py-14 mt-24"></div>
 
   <script src="./JS/utility.js"></script>
   <script src="./JS/script.js"></script>

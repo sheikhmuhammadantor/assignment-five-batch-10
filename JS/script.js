@@ -1,24 +1,29 @@
-addToHistory();
-
 const donateBtn = document.getElementById('donate-btn');
 const historyBtn = document.getElementById('history-btn');
 const historyMein = document.getElementById('history-main');
 const donateMain = document.getElementById('donation-main');
+const endPage = document.getElementById('endPage');
 
+// Donate Section Show;
 donateBtn.addEventListener('click', () => {
     donateBtn.classList.add('bg-lightGreen', 'hover:bg-lightGreen');
     historyBtn.classList.remove('bg-lightGreen', 'hover:bg-lightGreen');
 
     document.getElementById('donation-main').classList.remove('hidden');
     historyMein.classList.add('hidden');
+
+    endPage.classList.remove('hidden');
 })
 
+// History Section Show;
 historyBtn.addEventListener('click', () => {
     historyBtn.classList.add('bg-lightGreen', 'hover:bg-lightGreen');
     donateBtn.classList.remove('bg-lightGreen', 'hover:bg-lightGreen');
 
     historyMein.classList.remove('hidden');
     donateMain.classList.add('hidden');
+
+    endPage.classList.add('hidden');
 })
 
 // Donate -
